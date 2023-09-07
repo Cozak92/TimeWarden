@@ -16,3 +16,16 @@ fun Temporal.travel(block: (Temporal) -> Unit) {
 fun Temporal.scale(scaling: Long, block: (Temporal?) -> Unit) {
     TimeWarden.scale(this, scaling, block)
 }
+
+fun zonedDateTimeNow(): ZonedDateTime {
+    return TimeWarden.now(ZonedDateTime::class.java) as ZonedDateTime
+}
+
+fun localDateTimeNow(): LocalDateTime {
+    return TimeWarden.now(LocalDateTime::class.java) as LocalDateTime
+}
+
+fun instantNow(): Instant {
+    return TimeWarden.now(Instant::class.java) as Instant
+}
+

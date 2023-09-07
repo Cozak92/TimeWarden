@@ -6,18 +6,6 @@ import java.time.temporal.ChronoUnit
 import java.time.temporal.Temporal
 import java.util.*
 
-fun zonedDateTimeNow(): ZonedDateTime {
-    return TimeWarden.now(ZonedDateTime::class.java) as ZonedDateTime
-}
-
-fun localDateTimeNow(): LocalDateTime {
-    return TimeWarden.now(LocalDateTime::class.java) as LocalDateTime
-}
-
-fun instantNow(): Instant {
-    return TimeWarden.now(Instant::class.java) as Instant
-}
-
 
 object TimeWarden {
     private val timeStack: Stack<TimeStackItem> = Stack()
